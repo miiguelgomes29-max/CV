@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículo Vitae</title>
+    <title>Currículo Vitae - Miguel Almeida Gomes</title>
 
     <style>
         * {
@@ -31,6 +31,8 @@
             box-shadow: 0 5px 25px #00000020;
         }
 
+        /* COLUNA LATERAL */
+
         .sidebar {
             background: #26313b;
             color: white;
@@ -48,8 +50,9 @@
         }
 
         .name {
-            font-size: 25px;
-            font-weight: normal;
+            font-size: 23px;
+            font-weight: bold;
+            line-height: 1.2;
             margin-bottom: 35px;
             overflow-wrap: anywhere;
         }
@@ -90,6 +93,8 @@
             color: #fff;
             text-decoration: none;
         }
+
+        /* CONTEÚDO PRINCIPAL */
 
         .main {
             padding: 45px 38px;
@@ -138,15 +143,12 @@
             line-height: 1.7;
         }
 
-        .skill-level {
-            color: #555;
-            font-size: 11px;
-        }
-
         .highlight {
             color: #bd8c12;
             font-weight: bold;
         }
+
+        /* BOTÃO PDF */
 
         .buttons {
             text-align: center;
@@ -166,6 +168,8 @@
         button:hover {
             background: #405263;
         }
+
+        /* IMPRESSÃO / PDF */
 
         @page {
             size: A4;
@@ -215,6 +219,8 @@
             }
         }
 
+        /* TELEMÓVEIS */
+
         @media screen and (max-width: 650px) {
             body {
                 padding: 10px;
@@ -258,16 +264,17 @@
 
     <div class="cv">
 
+        <!-- COLUNA ESQUERDA -->
+
         <aside class="sidebar">
 
-            <!-- Caminho exato com a extensão .jpeg -->
             <img
                 src="./foto.jpeg"
-                alt="Fotografia pessoal"
+                alt="Fotografia de Miguel Almeida Gomes"
                 class="photo"
             >
 
-            <h1 class="name">O Teu Nome</h1>
+            <h1 class="name">Miguel Almeida Gomes</h1>
 
             <section class="side-section">
                 <h2>Contacto</h2>
@@ -279,24 +286,14 @@
 
                 <p>
                     <strong>Telefone:</strong><br>
-                    +351 9XX XXX XXX
+                    +351 962 839 930
                 </p>
 
                 <p>
                     <strong>Email:</strong><br>
-                    <a href="mailto:teuemail@email.com">
-                        teuemail@email.com
+                    <a href="mailto:miiguel.gomes29@gmail.com">
+                        miiguel.gomes29@gmail.com
                     </a>
-                </p>
-
-                <p>
-                    <strong>LinkedIn:</strong><br>
-                    Adiciona o teu perfil, se tiveres.
-                </p>
-
-                <p>
-                    <strong>GitHub:</strong><br>
-                    Adiciona o teu perfil, se tiveres.
                 </p>
             </section>
 
@@ -308,11 +305,11 @@
                     <li>JavaScript</li>
                     <li>PHP</li>
                     <li>SQL e MySQL</li>
-                    <li>Desenvolvimento web</li>
-                    <li>Bases de dados</li>
-                    <li>Redes informáticas</li>
-                    <li>Resolução de problemas</li>
-                    <li>Trabalho em equipa</li>
+                    <li>Desenvolvimento Web</li>
+                    <li>Bases de Dados</li>
+                    <li>Redes Informáticas</li>
+                    <li>Resolução de Problemas</li>
+                    <li>Trabalho em Equipa</li>
                 </ul>
             </section>
 
@@ -321,12 +318,17 @@
 
                 <p>
                     <strong>Português</strong><br>
-                    Língua materna
+                    Língua Materna
                 </p>
 
                 <p>
                     <strong>Inglês</strong><br>
-                    Nível B2, se confirmado
+                    Nível B2
+                </p>
+
+                <p>
+                    <strong>Francês</strong><br>
+                    Nível A1
                 </p>
             </section>
 
@@ -334,14 +336,17 @@
                 <h2>Interesses</h2>
 
                 <ul>
-                    <li>Programação</li>
-                    <li>Tecnologia</li>
-                    <li>Desenvolvimento de websites</li>
-                    <li>Desporto</li>
+                    <li>Basquetebol</li>
+                    <li>Artes Marciais</li>
+                    <li>Música</li>
+                    <li>Programação e Tecnologia</li>
+                    <li>Desenvolvimento Web</li>
                 </ul>
             </section>
 
         </aside>
+
+        <!-- COLUNA DIREITA -->
 
         <main class="main">
 
@@ -351,14 +356,15 @@
                 <p>
                     Estudante do curso profissional de Técnico de
                     Gestão e Programação de Sistemas Informáticos,
-                    com interesse no desenvolvimento de aplicações
-                    web, programação e bases de dados.
+                    com forte interesse no desenvolvimento de aplicações
+                    web, programação e gestão de bases de dados.
                 </p>
 
                 <p>
-                    Sou uma pessoa motivada, organizada e com vontade
-                    de aprender novas tecnologias, melhorar as minhas
-                    competências e participar em novos projetos.
+                    Sou uma pessoa motivada, disciplinada e com elevada
+                    vontade de aprender novas tecnologias. Praticante de desporto,
+                    o que contribui para o meu foco, capacidade de trabalho em equipa
+                    e resiliência na resolução de desafios técnicos.
                 </p>
             </section>
 
@@ -395,7 +401,7 @@
                 <div class="item">
                     <div class="item-header">
                         <h3>Aplicação Web</h3>
-                        <span class="date">Projeto escolar</span>
+                        <span class="date">Projeto Escolar</span>
                     </div>
 
                     <p>
@@ -435,7 +441,7 @@
                         Ainda sem experiência profissional formal,
                         procuro desenvolver competências através
                         de projetos escolares e de futuras
-                        oportunidades de estágio.
+                        oportunidades de estágio na área da informática.
                     </p>
                 </div>
             </section>
@@ -444,11 +450,10 @@
                 <h2>Competências Pessoais</h2>
 
                 <ul>
-                    <li>Capacidade de aprendizagem</li>
-                    <li>Organização e responsabilidade</li>
-                    <li>Pensamento lógico</li>
-                    <li>Trabalho em equipa</li>
-                    <li>Interesse pela inovação tecnológica</li>
+                    <li>Disciplina e foco (desenvolvidos através do desporto e artes marciais)</li>
+                    <li>Trabalho em equipa e espírito colaborativo</li>
+                    <li>Capacidade de aprendizagem contínua</li>
+                    <li>Organização, responsabilidade e pensamento lógico</li>
                 </ul>
             </section>
 
