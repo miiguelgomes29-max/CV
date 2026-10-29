@@ -1,0 +1,475 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currículo Vitae</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e8e8e8;
+            color: #222;
+            padding: 30px 15px;
+            font-size: 12px;
+        }
+
+        .cv {
+            width: 100%;
+            max-width: 950px;
+            min-height: 1120px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 32% 68%;
+            background: white;
+            box-shadow: 0 5px 25px #00000020;
+        }
+
+        /* COLUNA LATERAL */
+
+        .sidebar {
+            background: #26313b;
+            color: white;
+            padding: 38px 28px;
+        }
+
+        .photo {
+            width: 100%;
+            max-width: 210px;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 22px;
+            background: #d8dce0;
+        }
+
+        .name {
+            font-size: 25px;
+            font-weight: normal;
+            margin-bottom: 35px;
+            overflow-wrap: anywhere;
+        }
+
+        .side-section {
+            margin-bottom: 30px;
+        }
+
+        .side-section h2 {
+            font-size: 16px;
+            font-weight: bold;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
+            border-bottom: 1px solid #b8c0c7;
+        }
+
+        .side-section p {
+            line-height: 1.6;
+            margin-bottom: 12px;
+            overflow-wrap: anywhere;
+        }
+
+        .side-section ul {
+            list-style: none;
+        }
+
+        .side-section li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        .side-section li::before {
+            content: "• ";
+            color: #f2bd35;
+        }
+
+        .side-section a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* CONTEÚDO PRINCIPAL */
+
+        .main {
+            padding: 45px 38px;
+        }
+
+        .main-section {
+            margin-bottom: 32px;
+        }
+
+        .main-section h2 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            padding-bottom: 7px;
+            border-bottom: 2px solid #333;
+        }
+
+        .main-section p {
+            line-height: 1.65;
+            margin-bottom: 10px;
+        }
+
+        .item {
+            margin-bottom: 23px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 8px;
+            align-items: baseline;
+        }
+
+        .item-header h3 {
+            font-size: 13px;
+        }
+
+        .date {
+            color: #555;
+            font-size: 11px;
+            white-space: nowrap;
+        }
+
+        .item ul {
+            padding-left: 20px;
+            line-height: 1.7;
+        }
+
+        .skill-level {
+            color: #555;
+            font-size: 11px;
+        }
+
+        .highlight {
+            color: #bd8c12;
+            font-weight: bold;
+        }
+
+        /* BOTÃO PDF */
+
+        .buttons {
+            text-align: center;
+            margin: 0 auto 20px;
+        }
+
+        button {
+            background: #26313b;
+            color: white;
+            border: none;
+            padding: 12px 22px;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #405263;
+        }
+
+        /* IMPRESSÃO / PDF */
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background: white;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            .buttons {
+                display: none;
+            }
+
+            .cv {
+                max-width: none;
+                width: 210mm;
+                min-height: 297mm;
+                box-shadow: none;
+                grid-template-columns: 32% 68%;
+            }
+
+            .sidebar {
+                padding: 12mm 7mm;
+            }
+
+            .main {
+                padding: 12mm 9mm;
+            }
+
+            .photo {
+                height: 48mm;
+            }
+
+            .main-section,
+            .item,
+            .side-section {
+                break-inside: avoid;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        /* TELEMÓVEIS */
+
+        @media screen and (max-width: 650px) {
+            body {
+                padding: 10px;
+            }
+
+            .cv {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                padding: 30px 25px;
+            }
+
+            .photo {
+                max-width: 180px;
+                height: 190px;
+            }
+
+            .name {
+                text-align: center;
+            }
+
+            .main {
+                padding: 30px 25px;
+            }
+
+            .item-header {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="buttons">
+        <button onclick="window.print()">
+            Descarregar CV em PDF
+        </button>
+    </div>
+
+    <div class="cv">
+
+        <!-- COLUNA ESQUERDA -->
+
+        <aside class="sidebar">
+
+            <!-- Substitui foto.jpg pela tua fotografia -->
+            <img
+                src="foto.jpg"
+                alt="Fotografia pessoal"
+                class="photo"
+            >
+
+            <h1 class="name">O Teu Nome</h1>
+
+            <section class="side-section">
+                <h2>Contacto</h2>
+
+                <p>
+                    <strong>Morada:</strong><br>
+                    Cantanhede, Portugal
+                </p>
+
+                <p>
+                    <strong>Telefone:</strong><br>
+                    +351 9XX XXX XXX
+                </p>
+
+                <p>
+                    <strong>Email:</strong><br>
+                    <a href="mailto:teuemail@email.com">
+                        teuemail@email.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>LinkedIn:</strong><br>
+                    Adiciona o teu perfil, se tiveres.
+                </p>
+
+                <p>
+                    <strong>GitHub:</strong><br>
+                    Adiciona o teu perfil, se tiveres.
+                </p>
+            </section>
+
+            <section class="side-section">
+                <h2>Competências</h2>
+
+                <ul>
+                    <li>HTML e CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>SQL e MySQL</li>
+                    <li>Desenvolvimento web</li>
+                    <li>Bases de dados</li>
+                    <li>Redes informáticas</li>
+                    <li>Resolução de problemas</li>
+                    <li>Trabalho em equipa</li>
+                </ul>
+            </section>
+
+            <section class="side-section">
+                <h2>Idiomas</h2>
+
+                <p>
+                    <strong>Português</strong><br>
+                    Língua materna
+                </p>
+
+                <p>
+                    <strong>Inglês</strong><br>
+                    Nível B2, se confirmado
+                </p>
+            </section>
+
+            <section class="side-section">
+                <h2>Interesses</h2>
+
+                <ul>
+                    <li>Programação</li>
+                    <li>Tecnologia</li>
+                    <li>Desenvolvimento de websites</li>
+                    <li>Desporto</li>
+                </ul>
+            </section>
+
+        </aside>
+
+        <!-- COLUNA DIREITA -->
+
+        <main class="main">
+
+            <section class="main-section">
+                <h2>Perfil Profissional</h2>
+
+                <p>
+                    Estudante do curso profissional de Técnico de
+                    Gestão e Programação de Sistemas Informáticos,
+                    com interesse no desenvolvimento de aplicações
+                    web, programação e bases de dados.
+                </p>
+
+                <p>
+                    Sou uma pessoa motivada, organizada e com vontade
+                    de aprender novas tecnologias, melhorar as minhas
+                    competências e participar em novos projetos.
+                </p>
+            </section>
+
+            <section class="main-section">
+                <h2>Formação Académica</h2>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h3>Curso Profissional TGPSI</h3>
+                        <span class="date">2024 – 2027</span>
+                    </div>
+
+                    <p>
+                        Escola Técnico Profissional de Cantanhede
+                    </p>
+
+                    <p>
+                        <strong>Área:</strong>
+                        Gestão e Programação de Sistemas Informáticos
+                    </p>
+
+                    <ul>
+                        <li>Programação de aplicações</li>
+                        <li>Desenvolvimento de páginas web</li>
+                        <li>Gestão de bases de dados</li>
+                        <li>Instalação e configuração de redes</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="main-section">
+                <h2>Projetos Desenvolvidos</h2>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h3>Aplicação Web</h3>
+                        <span class="date">Projeto escolar</span>
+                    </div>
+
+                    <p>
+                        Desenvolvimento de uma aplicação web com
+                        páginas dinâmicas, formulários e ligação
+                        a uma base de dados.
+                    </p>
+
+                    <p>
+                        <span class="highlight">Tecnologias:</span>
+                        PHP, HTML, CSS, JavaScript e MySQL.
+                    </p>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h3>Gestão de Base de Dados</h3>
+                    </div>
+
+                    <p>
+                        Criação e organização de tabelas,
+                        relações entre dados e consultas SQL
+                        para gerir informação.
+                    </p>
+                </div>
+            </section>
+
+            <section class="main-section">
+                <h2>Experiência Profissional</h2>
+
+                <div class="item">
+                    <div class="item-header">
+                        <h3>À procura da primeira experiência</h3>
+                    </div>
+
+                    <p>
+                        Ainda sem experiência profissional formal,
+                        procuro desenvolver competências através
+                        de projetos escolares e de futuras
+                        oportunidades de estágio.
+                    </p>
+                </div>
+            </section>
+
+            <section class="main-section">
+                <h2>Competências Pessoais</h2>
+
+                <ul>
+                    <li>Capacidade de aprendizagem</li>
+                    <li>Organização e responsabilidade</li>
+                    <li>Pensamento lógico</li>
+                    <li>Trabalho em equipa</li>
+                    <li>Interesse pela inovação tecnológica</li>
+                </ul>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
